@@ -2,7 +2,9 @@
 
 A standalone Python-based GUI tool to estimate geodetic glacier mass balance using satellite-derived Digital Elevation Models (DEMs). The tool supports DEM co-registration, elevation change analysis, uncertainty modeling, and mass balance estimation — all through an intuitive graphical interface.
 
-This tool is built on top of the [xDEM](https://github.com/GlacioHack/xdem) open-source package — a Python library developed by the GlacioHack community for the analysis of digital elevation models, providing robust methods for DEM co-registration, elevation change analysis, and uncertainty quantification. [![xDEM GitHub](https://img.shields.io/badge/built%20on-xDEM-4c9be8)](https://github.com/GlacioHack/xdem?tab=readme-ov-file)
+This tool is built on top of the [xDEM](https://github.com/GlacioHack/xdem) open-source package — a Python library developed by the GlacioHack community for the analysis of digital elevation models, providing robust methods for DEM co-registration, elevation change analysis, and uncertainty quantification. 
+
+[![xDEM GitHub](https://img.shields.io/badge/built%20on-xDEM-4c9be8)](https://github.com/GlacioHack/xdem?tab=readme-ov-file)
 [![xDEM Docs](https://img.shields.io/badge/docs-xDEM-brightgreen)](https://xdem.readthedocs.io/en/stable/)
 
 ## 🛠️ Requirements
@@ -67,7 +69,7 @@ This will open the Geodetic Glacier Mass Balance Tool in a standalone window.
 
 ## 📝 Additional Notes 
 
-[1] The user needs to create a folder called "__data__" which should further contain 2 sub-folders: (i) era5land_2m_temperature (ii) era5land_snowfall. The user should download in "GRIB" format data for these variables for their study region. I have attached a screen shot for the same below for your reference. Each of the individual files were quite large (approx 40-60 MB), so I didn't upload them. Downloading these files is optional if the end user do not wish to perform seasonality correction. Or the user can perform the seasonality correction manually using their own algorithm after the inital mass balance results are derived. 
+[1] The user needs to create a folder called "__data__" which should further contain 2 sub-folders: (i) era5land_2m_temperature (ii) era5land_snowfall. The user should download in "__GRIB__" format data for these variables for their study region. I have attached a screen shot for the same below for your reference. Each of the individual files were quite large (approx 40-60 MB), so they were not uploaded. Downloading these files is optional if the end user do not wish to perform seasonality correction. Or the user can perform the seasonality correction manually using their own algorithm after the inital mass balance results are derived. 
 
 <p align="center">
   <table>
@@ -76,8 +78,8 @@ This will open the Geodetic Glacier Mass Balance Tool in a standalone window.
       <td><img width="100%" src="https://github.com/user-attachments/assets/a6c5228a-446c-4e23-9778-e2c8d7b3ed2c" /></td>
     </tr>
     <tr>
-      <td align="center"><b>Figure 1</b> <em>Sample ERA5Land 2m temperature Variable files</em></td>
-      <td align="center"><b>Figure 2</b> <em>Sample ERA5Land Snowfall Variable files</em></td>
+      <td align="center"><b>Figure 1</b> <em>Sample ERA5Land 2m-temperature variable files</em></td>
+      <td align="center"><b>Figure 2</b> <em>Sample ERA5Land Snowfall variable files</em></td>
     </tr>
   </table>
 </p>
