@@ -1,0 +1,12 @@
+numpy
+pandas
+matplotlib
+scipy
+pytransform3d
+geopandas
+rasterio
+xdem==0.1.4
+opencv-contrib-python
+geoutils
+tkcalendar
+Pillow
