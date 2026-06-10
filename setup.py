@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='geodetic_model',
-    version='0.1.0',
+    version='1.0.0',
     description='GUI tool for geodetic glacier mass balance estimation using xDEM',
     author='Ashutosh Kulkarni',
     author_email='ashutoshk@ncpor.res.in',
