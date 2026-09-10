@@ -420,7 +420,8 @@ def show_snowfall_estimates_window(gui, df):
                     ref_date=gui.ref_date.get_date(),
                     align_date=gui.align_date.get_date(),
                     ice_density_uniform=gui.param_vars[2].get(),
-                    integer_years=gui.param_vars[8].get(),
+                    ice_density_uncertainty=gui.param_vars[3].get(),
+                    integer_years=gui.param_vars[9].get(),
                     snowfall_estimates_df=gui.snowfall_estimates_df
                 )
                 gui.result["data"]["df_mass_balance"] = updated_df
