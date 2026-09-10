@@ -48,12 +48,10 @@ This tool is built on top of the [xDEM](https://github.com/GlacioHack/xdem) open
     ```bash
     pip install -r requirements.txt
     ```
-4. Install the tool locally using `setup.py`:
+4. Install the tool locally using `setup.py` (This registers the tool as a command-line application named `geodetic-model`):
     ```bash
     pip install .
     ```
-This registers the tool as a command-line application named `geodetic-model`
-
 5. ALTERNATE METHOD (Try this First !) There could be conflict in versions of various packages being installed and their dependencies. You can directly create a new environment in 'Anaconda Prompt' using the 'environment.yml' file. This will install the exact versions required. One caveat, in the last line of 'environment.yml' file make sure you give the correct path to your 'env' folder (check where your Anaconda is installed)
    ```bash
    conda env create -f environment.yml
