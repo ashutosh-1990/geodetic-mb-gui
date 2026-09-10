@@ -162,6 +162,7 @@ class Geodetic_MB_GUI:
             ("NMAD Filtering", "6"),
             ("Absolute threshold filter value (meters)", "FILTERING OPTION 1/2 (Ref. Help, Section 7)"),
             ("Ice Density (Uniform, Kg/m3)", "850"),
+            ("Ice Density Uncertainty (Kg/m3)", "60"),
             ("ELA Value (meters a.s.l)", "FILTERING OPTION 2/2 (Can be skipped)"),
             ("Max ice thickness gain (Accumulation Zone, meters)", "USER INPUT REQUIRED (related to filtering option 2)"),
             ("Max ice thickness loss (Accumulation Zone, meters)", "0 (related to filtering option 2)"),
@@ -487,7 +488,7 @@ class Geodetic_MB_GUI:
             plot_title = (
                 "GEODETIC GLACIER MASS BALANCE \n"
                 f"(Coregistration Algorithm: {self.coreg_algo.get()},\n Interpolation & Filter Algo: {self.interpolation_dropdown.get()},\n "
-                f"Ice Density: {self.param_vars[2].get()},"
+                f"Ice Density: {self.param_vars[2].get()}, Ice Density Uncertainty: {self.param_vars[3].get()},"
                 f"Heteroscedasticity: {self.hetero_dropdown.get()},\n Spatial Correlation: {self.spatial_corr_dropdown.get()})"
             )
         
@@ -625,10 +626,15 @@ class Geodetic_MB_GUI:
                 self.input_entries[key].config(fg="blue")
     
         try:
-            self.param_vars[1].set("80")     # Absolute threshold
-            self.param_vars[3].set("5836")   # ELA
-            self.param_vars[4].set("20")     # Max gain in accumulation zone
-            self.param_vars[7].set("100")    # Max loss in ablation zone
+            self.param_vars[0].set("6")       # NMAD filtering
+            self.param_vars[1].set("80")      # Absolute threshold filtering
+            self.param_vars[2].set("850")     # Ice density
+            self.param_vars[3].set("60")      # Ice density uncertainty
+            self.param_vars[4].set("5836")    # ELA value
+            self.param_vars[5].set("20")      # Max ice thickness gain accumulation zone
+            self.param_vars[6].set("0")       # Max ice thickness loss accumulation zone
+            self.param_vars[7].set("0")       # Max ice thickness gain ablation zone
+            self.param_vars[8].set("100")     # Max ice thickness loss ablation zone
         except IndexError:
             messagebox.showwarning("Warning", "One or more parameters could not be set. Check param_vars index.")
     
