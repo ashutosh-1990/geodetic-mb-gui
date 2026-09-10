@@ -12,6 +12,7 @@ def compute_geodetic_mass_balance(
     ref_date,
     align_date,
     ice_density_uniform,
+    ice_density_uncertainty,
     integer_years,
     snowfall_estimates_df=None  # Optional: includes snow corrections
 ):
@@ -23,6 +24,7 @@ def compute_geodetic_mass_balance(
         df_uncertainty (DataFrame): Must include "Elevation_Change", "Uncertainty"
         ref_date, align_date (datetime.date): DEM acquisition dates
         ice_density_uniform (float or str): Density in kg/m³
+        ice_density_uncertainty (float or str): Density uncertainty in kg/m³
         snowfall_estimates_df (optional DataFrame): Must match glacier order, include:
             - "Snow Bias Correction"
             - "Seasonality Correction"
@@ -33,8 +35,9 @@ def compute_geodetic_mass_balance(
     no_of_years = (align_date - ref_date).days / 365.25
 
     density = float(ice_density_uniform)
+    density_unc = float(ice_density_uncertainty)
     df_uncertainty["cumulative_Mass_Balance"] = (df_uncertainty["Elevation_Change"] * (density / 1000)) 
-    df_uncertainty["cumulative_MB_Uncertainty"] = (df_uncertainty["Uncertainty"] * (density / 1000)) 
+    df_uncertainty["cumulative_MB_Uncertainty"] = np.sqrt((df_uncertainty["Uncertainty"] * density/1000)**2 + (df_uncertainty["Elevation_Change"] * density_unc/1000)**2) 
     i=0
     if snowfall_estimates_df is not None:
         try:
