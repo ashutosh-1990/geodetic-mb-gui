@@ -8,12 +8,13 @@ This tool is built on top of the [xDEM](https://github.com/GlacioHack/xdem) open
 [![xDEM Docs](https://img.shields.io/badge/docs-xDEM-brightgreen)](https://xdem.readthedocs.io/en/stable/)
 [![Paper](https://img.shields.io/badge/paper-IEEE-blue)](https://ieeexplore.ieee.org/abstract/document/9815885)
 
+
 <p align="center">
   <table width="50%">
     <tr>
       <td align="center" style="border: 3px solid white; padding: 8px;">
         <img width="78%" alt="image"
-             src="https://github.com/user-attachments/assets/52bdfcb7-3bd9-42d9-95d9-670d41591681" />
+             src="https://github.com/user-attachments/assets/c706fa17-6351-41c5-a1a3-ef83aecea712" />
         <br><br>
         <em>Python based graphical user interface for rapid estimation of geodetic glacier mass balance, based on open source <a href="https://github.com/GlacioHack/xdem">xDEM</a> package.</em>
       </td>
