@@ -166,7 +166,8 @@ def run_geodetic_pipeline(ref_dem, align_dem, unstable_shp, glacier_shp,
             ref_date=ref_date,
             align_date=align_date,
             ice_density_uniform=params[2],
-            integer_years=params[8],
+            ice_density_uncertainty=params[3],
+            integer_years=params[9],
             snowfall_estimates_df=snowfall_estimates_df  # ✅ Pass correctly here
         )
 
